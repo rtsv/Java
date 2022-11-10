@@ -1,0 +1,38 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int n=4;
+		int a[] = {4,5,6,7};
+		int b[] = {2,3,4,8};
+		int c[] = new int[8];
+		int i=0;
+		int j=0;
+		int k=0;
+		while(i<n && j<n)
+		{
+		    if(a[i]<b[j])
+		    {
+		        c[k++]=a[i++];
+		    }
+		    else
+		    {
+		        c[k++]=b[j++];
+		        
+		    }
+		}
+		while(i<n)
+		{
+		    c[k++]=a[i++];
+		}
+		while(j<n)
+		{
+		    c[k++]=b[j++];
+		}
+		
+		for(i=0;i<8;i++)
+		{
+		    System.out.println(c[i]);
+		}
+	}
+}
